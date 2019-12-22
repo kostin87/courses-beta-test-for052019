@@ -27,10 +27,8 @@ skills: 5
 
 `@pre_exercise_code`
 ```{r}
-load(url('https://assets.datacamp.com/production/repositories/5018/datasets/2a1cb49c1085af50c535acf5f11f7211c08209bf/MSFT.RData'))
-load(url('https://assets.datacamp.com/production/repositories/5018/datasets/d12fbac7d1f9d95f86079fee4da7f367d8fe8deb/SPY.RData.rdata'))
-spy=SPY$SPY.Close
-msft=MSFT$MSFT.Close
+require("quantmod")
+getSymbols('SPY')
 ```
 
 `@sample_code`
