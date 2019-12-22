@@ -27,8 +27,7 @@ skills: 5
 
 `@pre_exercise_code`
 ```{r}
-require("quantmod")
-getSymbols('SPY')
+load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_2233/datasets/SPY.RData"))
 ```
 
 `@sample_code`
