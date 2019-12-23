@@ -27,10 +27,8 @@ skills: 5
 
 `@pre_exercise_code`
 ```{r}
-load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_2233/datasets/SPY.RData"))
-load(url("https://assets.datacamp.com/production/repositories/5018/datasets/d46868820f999335b6cc7516e796206b88bda22b/MSFT.RData"))
-SPY=SPY$SPY.Close
-MSFT=MSFT$MSFT.Close
+SPY=load(url("https://assets.datacamp.com/production/repositories/5018/datasets/d4cf007905180d14fea57c9454cace4f145733fb/SPY.RData"))
+MSFT=load(url("https://assets.datacamp.com/production/repositories/5018/datasets/d46868820f999335b6cc7516e796206b88bda22b/MSFT.RData"))
 ```
 
 `@sample_code`
@@ -79,7 +77,6 @@ skills: 5
 `@pre_exercise_code`
 ```{r}
 n=round(runif(1, min = 1, max = 30))
-load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_2233/datasets/SPY.RData"))
 spy=SPY[[1]][((n-1)*390+1):(n*390),2]
 ```
 
@@ -124,7 +121,6 @@ skills: 5
 `@pre_exercise_code`
 ```{r}
 n=round(runif(1, min = 1, max = 30))
-load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_2233/datasets/SPY.RData"))
 spy=SPY[[1]][((n-1)*390+1):(n*390),2]
 r<-diff(log(spy))
 ```
@@ -169,7 +165,6 @@ skills: 5
 `@pre_exercise_code`
 ```{r}
 n=round(runif(1, min = 1, max = 30))
-load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_2233/datasets/SPY.RData"))
 spy=SPY[[1]][((n-1)*390+1):(n*390),2]
 r<-diff(log(spy))
 ```
@@ -214,7 +209,6 @@ skills: 5
 `@pre_exercise_code`
 ```{r}
 n=round(runif(1, min = 1, max = 30))
-load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_2233/datasets/SPY.RData"))
 spy=SPY[[1]][((n-1)*390+1):(n*390),2]
 ```
 
@@ -263,7 +257,6 @@ skills: 5
 `@pre_exercise_code`
 ```{r}
 n=round(runif(1, min = 1, max = 30))
-load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_2233/datasets/SPY.RData"))
 spy=SPY[[1]][((n-1)*390+1):(n*390),2]
 r<-diff(log(spy))
 ```
@@ -306,7 +299,6 @@ skills: 1
 `@pre_exercise_code`
 ```{r}
 n=round(runif(1, min = 1, max = 30))
-load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_2233/datasets/SPY.RData"))
 spy=SPY[[1]][((n-1)*390+1):(n*390),2]
 r<-diff(log(spy))
 ```
@@ -351,7 +343,6 @@ skills: 1
 `@pre_exercise_code`
 ```{r}
 n=round(runif(1, min = 1, max = 30))
-load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_2233/datasets/SPY.RData"))
 spy=SPY[[1]][((n-1)*390+1):(n*390),2]
 r<-diff(log(spy))
 ```
@@ -394,7 +385,6 @@ skills: 5
 `@pre_exercise_code`
 ```{r}
 n=round(runif(1, min = 1, max = 30))
-load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_2233/datasets/SPY.RData"))
 spy=SPY[[1]][((n-1)*390+1):(n*390),2]
 r<-diff(log(spy))
 ```
@@ -481,7 +471,6 @@ skills: 5
 `@pre_exercise_code`
 ```{r}
 n=round(runif(1, min = 1, max = 30))
-load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_2233/datasets/SPY.RData"))
 spy=SPY[[1]][((n-1)*390+1):(n*390),2]
 ```
 
@@ -628,7 +617,6 @@ skills: 5
 ```{r}
 require('forecast')
 n=round(runif(1, min = 1, max = 30))
-load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_2233/datasets/SPY.RData"))
 spy=SPY[[1]][((n-1)*390+1):(n*390),2]
 ```
 
@@ -672,7 +660,6 @@ skills: 5
 library('timeSeries')
 library("PerformanceAnalytics")
 n=round(runif(1, min = 1, max = 30))
-load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_2233/datasets/SPY.RData"))
 spy=SPY[[1]][((n-1)*390+1):(n*390),2]
 r<-diff(log(spy))
 r=timeSeries(r,charvec=(1:NROW(r))*24*60*60)
@@ -718,7 +705,6 @@ skills: 1
 library('timeSeries')
 library("PerformanceAnalytics")
 n=round(runif(1, min = 1, max = 30))
-load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_2233/datasets/SPY.RData"))
 spy=SPY[[1]][((n-1)*390+1):(n*390),2]
 r<-diff(log(spy))
 r=timeSeries(r,charvec=(1:NROW(r))*24*60*60)
