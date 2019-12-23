@@ -18,7 +18,7 @@ skills: 5
 
 
 `@instructions`
-- У вас есть цены актива spy и msft.
+- У вас есть цены актива SPY и MSFT.
 - Вычислите обычную доходность для этого актива и запишите ее в переменную Rspy и Rmsft.
 - Вычислите доходность портфеля с весами 0.5 и 0.5 и запишите ее в переменную Rportf.
 
@@ -28,9 +28,9 @@ skills: 5
 `@pre_exercise_code`
 ```{r}
 load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_2233/datasets/SPY.RData"))
-load(url("https://assets.datacamp.com/production/repositories/5018/datasets/2a1cb49c1085af50c535acf5f11f7211c08209bf/MSFT.RData"))
-spy=SPY$SPY.Close
-msft=MSFT$MSFT.Close
+load(url("https://assets.datacamp.com/production/repositories/5018/datasets/d46868820f999335b6cc7516e796206b88bda22b/MSFT.RData"))
+SPY=SPY$SPY.Close
+MSFT=MSFT$MSFT.Close
 ```
 
 `@sample_code`
@@ -42,8 +42,8 @@ Rportf=
 
 `@solution`
 ```{r}
-Rspy =diff(spy)/spy[-NROW(spy)]
-Rmsft=diff(msft)/spy[-NROW(msft)]
+Rspy =diff(SPY)/SPY[-NROW(SPY)]
+Rmsft=diff(MSFT)/MSFT[-NROW(MSFT)]
 Rportf=0.5*Rspy+0.5*Rmsft
 ```
 
